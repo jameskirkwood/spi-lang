@@ -1,0 +1,41 @@
+{
+    "name": "spi-lang",
+    "displayName": "SPI Language Support",
+    "description": "SPI syntax highlighting and snippets",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": {
+        "name": "James Kirkwood",
+        "url": "https://github.com/jameskirkwood"
+    },
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "spi",
+            "aliases": ["SPI", "spi"],
+            "extensions": ["spi"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "spi",
+            "scopeName": "source.spi",
+            "path": "./syntaxes/spi.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "spi",
+                "path": "./snippets.json"
+            }
+        ],
+        "configurationDefaults": {
+            "[spi]": {
+                "editor.snippetSuggestions": "top"
+            }
+        }
+    }
+}

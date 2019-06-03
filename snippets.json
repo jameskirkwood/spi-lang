@@ -1,0 +1,183 @@
+{
+	"Extern": {
+		"scope": "spi",
+		"prefix": "extern",
+		"body": [
+			"extern ${1:static void Main.main}(${2:Number argc, String[] argv});",
+			"$0"
+		],
+		"description": "External method declaration (TODO: intellisense)"
+	},
+	"Forward": {
+		"scope": "spi",
+		"prefix": "forward",
+		"body": [
+			"forward ${1:static void main}(${2:Number argc, String[] argv});",
+			"$0"
+		],
+		"description": "Internal method declaration"
+	},
+	"Class": {
+		"scope": "spi",
+		"prefix": "class",
+		"body": [
+			"// ${2:${1:$TM_FILENAME_BASE} class}",
+			"class ${1:$TM_FILENAME_BASE}",
+			"{",
+			"private:",
+			"\t${3:static ${1:$TM_FILENAME_BASE} nil;}",
+			"\t${4:// static variables}",
+			"\t${5:// instance variables}",
+			"public:",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "Class definition"
+	},
+	"Main Class": {
+		"scope": "spi",
+		"prefix": "main",
+		"body": [
+			"// ${1:main class}",
+			"class Main",
+			"{",
+			"private:",
+			"public:",
+			"\t// ${2:entry point}",
+			"\tstatic void main(Number argc, String[] argv)",
+			"\t{",
+			"\t\t$0",
+			"\t}",
+			"}",
+			""
+		],
+		"description": "Main class definition"
+	},
+	"Constructor": {
+		"scope": "spi",
+		"prefix": "constructor",
+		"body": [
+			"// ${1:create an empty ${2:$TM_FILENAME_BASE}}",
+			"constructor ${2:$TM_FILENAME_BASE} ${3:new}($4)",
+			"{",
+			"\t${5:return this;}",
+			"}$0"
+		],
+		"description": "Constructor definition"
+	},
+	"Method": {
+		"scope": "spi",
+		"prefix": "method",
+		"body": [
+			"// ${1:do the thing}",
+			"${2:static void} ${3:thing}($4)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Method definition"
+	},
+	"Do": {
+		"scope": "spi",
+		"prefix": "dowhile",
+		"body": [
+			"do",
+			"{",
+			"\t$0",
+			"}",
+			"while (${1:false});"
+		],
+		"description": "Do-while loop"
+	},
+	"For": {
+		"scope": "spi",
+		"prefix": "for",
+		"body": [
+			"for (${1:i = 0}; ${2:i < n}; ${3:i = i + 1})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "For loop"
+	},
+	"If": {
+		"scope": "spi",
+		"prefix": "if",
+		"body": [
+			"if (${1:true})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "If statement"
+	},
+	"Elif": {
+		"scope": "spi",
+		"prefix": "elif",
+		"body": [
+			"elif (${1:true})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Elif clause"
+	},
+	"Else": {
+		"scope": "spi",
+		"prefix": "else",
+		"body": [
+			"else",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Else clause"
+	},
+	"Switch": {
+		"scope": "spi",
+		"prefix": "switch",
+		"body": [
+			"switch ($1)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Switch statement"
+	},
+	"Case": {
+		"scope": "spi",
+		"prefix": "case",
+		"body": [
+			"case $1: $0"
+		],
+		"description": "Case label"
+	},
+	"Default": {
+		"scope": "spi",
+		"prefix": "default",
+		"body": [
+			"default: $0"
+		],
+		"description": "Default label"
+	},
+	"While": {
+		"scope": "spi",
+		"prefix": "while",
+		"body": [
+			"while (${1:true})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "While loop"
+	},
+	"Increment": {
+		"scope": "spi",
+		"prefix": "increment",
+		"body": [
+			"$1 = $1 + 1$0"
+		],
+		"description": "Add one to a variable"
+	}
+}
