@@ -2,7 +2,7 @@
 
 This extension adds syntax highlighting and code snippets for Dr Fred Brown's SPI-Tools programming language.
 
-To install, copy the repository directory into `<user home>/.vscode/extensions`.
+This extension is NOT available on the Visual Studio Code extension marketplace. To install, copy the repository directory into `<user home>/.vscode/extensions`.
 
 ## Features
 
