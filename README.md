@@ -6,7 +6,7 @@ This extension is NOT available on the Visual Studio Code extension marketplace.
 
 ## Features
 
-- Linting for compilation errors (requires Python 3)
+- Linting for compilation errors (requires `python3`, `requests` and `bs4`)
 - Syntax highlighting including style rules
 - Snippets
     - `extern` - external forward declaration
