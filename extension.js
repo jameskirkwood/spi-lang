@@ -24,7 +24,7 @@ function activate(context) {
                         prompt: `Please enter the password for ${username}.`
                     });
                     if (!password) return;
-                    const child = cp.exec(`python3 ${context.extensionPath}/getcookie.py "${username}" "${password}"`);
+                    const child = cp.exec(`python3 ${path.join(context.extensionPath, 'getcookie.py')} "${username}" "${password}"`);
                     child.stdout.on('data', d => {
                         cookie = d.trim();
                         verify(context, document);
@@ -49,7 +49,7 @@ function activate(context) {
 function verify(context, document) {
     const classname = path.basename(document.fileName, '.spi');
     try {
-        const child = cp.exec(`python3 ${context.extensionPath}/compile.py "${username}" "${cookie}" "${classname}" "${document.fileName}"`);
+        const child = cp.exec(`python3 ${path.join(context.extensionPath, 'compile.py')} "${username}" "${cookie}" "${classname}" "${document.fileName}"`);
         child.stdout.on('data', d => {
             const { Info, Errors, Data } = JSON.parse(d);
             if (Errors.length > 0) throw Errors;
